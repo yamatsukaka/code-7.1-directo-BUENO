@@ -71,7 +71,7 @@ def createCompresing(filename,filesize,splitsize):
     msg+= '➢Cantidad Partes: ' + str(round(int(filesize/splitsize)+1,1))+'\n\n'
     return msg
 def createFinishUploading(filename,filesize,split_size,current,count,findex):
-    msg = '➢Proceso Finalizado📌\n\n'
+    msg = '➢Proceso Finalizado\n\n'
     msg+= '➢Nombre: ' + str(filename)+'\n'
     msg+= '➢Tamaño: ' + str(sizeof_fmt(filesize))+'\n'
     return msg
@@ -88,7 +88,7 @@ def createFileMsg(filename,files):
     return ''
 
 def createFilesMsg(evfiles):
-    msg = '📑Archivos ('+str(len(evfiles))+')📑\n\n'
+    msg = '➢Archivos ('+str(len(evfiles))+')📑\n\n'
     i = 0
     for f in evfiles:
             try:
