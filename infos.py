@@ -38,7 +38,7 @@ def createDownloading(filename,totalBits,currentBits,speed,time,tid=''):
     msg += '➢Archivo: '+filename+'\n'
     msg += text_progres(currentBits,totalBits)+'\n'
     msg += '➢Total: '+sizeof_fmt(totalBits)+' ➢Dl: '+sizeof_fmt(currentBits)+'\n'
-    msg += str(porcent(currentBits,totalBits)) + sizeof_fmt(speed)+'/s\n\n'
+    msg += str(porcent(currentBits,totalBits))+'%' + sizeof_fmt(speed)+'/s\n\n'
     
 
     if tid!='':
@@ -60,7 +60,7 @@ def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
         msg+= '➢Parte: ' + str(filename)+'\n'
     msg += text_progres(currentBits,totalBits)+'\n'
     msg += '➢Total: '+sizeof_fmt(totalBits)+' ➢Up: '+sizeof_fmt(currentBits)+'\n'
-    msg += str(porcent(currentBits,totalBits))+'%\n\n' + +sizeof_fmt(speed)+'/s\n\n'
+    msg += str(porcent(currentBits,totalBits))+'%' + +sizeof_fmt(speed)+'/s\n\n'
     
     return msg
 def createCompresing(filename,filesize,splitsize):
