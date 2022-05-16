@@ -114,19 +114,9 @@ def createStat(username,userdata,isadmin):
         msg+= '➢RepoID: ' + str(userdata['moodle_repo_id'])+'\n'
   # msg+= '➢CloudType: ' + str(userdata['cloudtype'])+'\n'
     msg+= '➢UpType: ' + str(userdata['uploadtype'])+'\n'
-    if userdata['cloudtype'] == 'cloud':
-       # msg+= '➢Dir: /' + str(userdata['dir'])+'\n'
     msg+= '➢Tamaño de Zips : ' + sizeof_fmt(userdata['zips']*1024*1024) + '\n\n'
-    msgAdmin = 'No'
-    if isadmin:
-        msgAdmin = 'Si'
-   # msg+= '➢Admin : ' + msgAdmin + '\n'
     proxy = 'NO'
     if userdata['proxy'] !='':
        proxy = 'SI'
-    tokenize = 'NO'
-    if userdata['tokenize']!=0:
-       tokenize = 'SI'
     msg+= '➢Proxy : ' + proxy + '\n'
-   # msg+= '➢Tokenize : ' + tokenize + '\n\n'
     return msg
