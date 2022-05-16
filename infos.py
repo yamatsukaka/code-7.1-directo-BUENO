@@ -117,7 +117,7 @@ def createStat(username,userdata,isadmin):
     if userdata['cloudtype'] == 'cloud':
        # msg+= '➢Dir: /' + str(userdata['dir'])+'\n'
     msg+= '➢Tamaño de Zips : ' + sizeof_fmt(userdata['zips']*1024*1024) + '\n\n'
-   msgAdmin = 'No'
+    msgAdmin = 'No'
     if isadmin:
         msgAdmin = 'Si'
    # msg+= '➢Admin : ' + msgAdmin + '\n'
